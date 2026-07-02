@@ -1,0 +1,356 @@
+TILESIZE = 64
+GROUND_LAYER = 1
+BLOCK_LAYER = 2
+PLAYER_LAYER = 3
+CHECKPOINT_LAYER = 2
+tilemaps=[[
+    ['BBBBB',
+    'B..CB',
+    'B...B',
+    'B.P.B',
+    'BBBBB',],
+
+    ['BBBBB',
+    'BC..B',
+    'B...B',
+    'B.P.B',
+    'BBBBB',],
+
+    ['BBBBB',
+    'B.P.B',
+    'B...B',
+    'B..CB',
+    'BBBBB',],
+
+    ['BBBBB',
+    'B.P.B',
+    'B...B',
+    'BC..B',
+    'BBBBB',],
+
+    ['BBBBB',
+    'B..CB',
+    'B...B',
+    'BP..B',
+    'BBBBB',]
+    
+],
+
+[
+    [
+    'BBBBBBBB',
+    'BP.B...B',
+    'B..B...B',
+    'B..B...B',
+    'B..B...B',
+    'B..BC..B',
+    'B......B',
+    'BBBBBBBB'
+]
+
+,
+[
+    'BBBBBBBB',
+    'BP.....B',
+    'BBBB...B',
+    'B......B',
+    'B...BBBB',
+    'BBB....B',
+    'BC.....B',
+    'BBBBBBBB'
+]
+
+,
+[
+    'BBBBBBBB',
+    'BP.B.B.B',
+    'B..B.B.B',
+    'B.B...BB',
+    'B.B.B..B',
+    'B.B.B..B',
+    'B.....CB',
+    'BBBBBBBB'
+]
+,
+[
+    'BBBBBBBB',
+    'BP.....B',
+    'B.BBBBBB',
+    'B.BC...B',
+    'B.B.BBBB',
+    'B.B....B',
+    'B......B',
+    'BBBBBBBB'
+],
+
+[
+    'BBBBBBBB',
+    'BP.BC..B',
+    'B..BBB.B',
+    'B......B',
+    'BBBB...B',
+    'B......B',
+    'B......B',
+    'BBBBBBBB'
+]
+],
+
+[
+    [
+    'BBBBBBBBBBB',
+    'BP.B......B',
+    'B..B..B...B',
+    'B..B..B...B',
+    'B..B..B...B',
+    'B....CB...B',
+    'B..B..B...B',
+    'B..B..B...B',
+    'B..........B',
+    'BBBBBBBBBBB'
+]
+
+,
+[
+    'BBBBBBBBBBB',
+    'B.P.......B',
+    'B.BBBBB...B',
+    'B.....B...B',
+    'B.B...B...B',
+    'B.B...B...B',
+    'B.B...B...B',
+    'B..C..B...B',
+    'B.........B',
+    'BBBBBBBBBBB'
+]
+
+,
+[
+    'BBBBBBBBBBB',
+    'B......P..B',
+    'B.BBBB.B..B',
+    'B.B....B..B',
+    'B.B.B..B..B',
+    'B.B.B..B..B',
+    'B.C.B..B..B',
+    'BBB.B.....B',
+    'B.........B',
+    'BBBBBBBBBBB'
+]
+
+,
+[
+    'BBBBBBBBBBB',
+    'BP........B',
+    'BBBB.BBBB.B',
+    'B....B....B',
+    'B.B..B..B.B',
+    'B.B....CB.B',
+    'B.B..B..B.B',
+    'B....B....B',
+    'B..........B',
+    'BBBBBBBBBBB'
+]
+
+,
+[
+    'BBBBBBBBBBB',
+    'BP........B',
+    'B.BBBBB...B',
+    'B.B.C.B...B',
+    'B.B.B.B...B',
+    'B.B.B.B...B',
+    'B.B.B.B...B',
+    'B...B.....B',
+    'B..........B',
+    'BBBBBBBBBBB'
+] 
+],
+[
+    [
+    'BBBBBBBBBBB',
+    'BP........B',
+    'B.BBBBB.B.B',
+    'B.BC..B.B.B',
+    'B.B.B.B.B.B',
+    'B.B.B.B.B.B',
+    'B.B.B.B.B.B',
+    'B.B.B...B.B',
+    'B.B.....B.B',
+    'BBBBBBBBBBB'
+],
+[
+    'BBBBBBBBBBB',
+    'BP.B...B..B',
+    'B..B...B..B',
+    'B..B...B..B',
+    'B.....B...B',
+    'B..B..B...B',
+    'B..B......B',
+    'B..BBBBB..B',
+    'B........CB',
+    'BBBBBBBBBBB'
+],
+
+
+[
+    'BBBBBBBBBBB',
+    'BP.B......B',
+    'B.B.B.B.B.B',
+    'B.........B',
+    'B.B.B.B.B.B',
+    'B.B.....B.B',
+    'B.B.BBB.B.B',
+    'B.B..C..B.B',
+    'B.........B',
+    'BBBBBBBBBBB'
+],
+
+
+[
+    'BBBBBBBBBBB',
+    'BP........B',
+    'B.BBBBB...B',
+    'B.......B.B',
+    'BBBBB...B.B',
+    'B....B..B.B',
+    'B.B..B..B.B',
+    'B.B..B....B',
+    'BCB.......B',
+    'BBBBBBBBBBB'
+],
+
+
+[
+    'BBBBBBBBBBB',
+    'BP.B.B.B..B',
+    'B..B.B.B..B',
+    'B..B...B..B',
+    'B..B.BBB..B',
+    'B....B....B',
+    'BBBB.BCBB.B',
+    'B.....B...B',
+    'B.........B',
+    'BBBBBBBBBBB'
+]
+],
+[
+    # Mapa 1 – Cobra (caminho sinuoso)
+[
+    'BBBBBBBBBBBBBBBBBBBBBB',
+    'BP....................B',
+    'B..BBBBBBBBBBBBBBBBB.B',
+    'B..B................B.B',
+    'B..B.BBBBBBBBBBBB.B.B.B',
+    'B..B.B..........B.B.B.B',
+    'B..B.B.BBBBBBBB.B.B.B.B',
+    'B..B.B.B........B.B.B.B',
+    'B..B.B.B.BBBB.B.B.B.B.B',
+    'B..B.B.B...CBB..B.B.B.B',
+    'B..B.B.BBBBB.BB.BBB.BB',
+    'B..B.B......B...B.B.B.B',
+    'B..B.BBBBBBBB.BBB.B.B.B',
+    'B..B..........B...B.B.B',
+    'B..BBBBBBBBBBBBBBBB.B.B',
+    'B...................B.B',
+    'B.BBBBBBBBBBBBBBBBBB.B',
+    'B......................B',
+    'B......................B',
+    'BBBBBBBBBBBBBBBBBBBBBB'
+],
+
+# Mapa 2 – Caminho em S (aberturas alternadas à direita/esquerda)
+[
+    'BBBBBBBBBBBBBBBBBBBBBB',
+    'BP...................B',
+    'BBBBBBBBBBBBBBBBBBB..B',
+    'B....................BB',
+    'B.BBBBBBBBBBBBBBBBBBBB',
+    'B....................BB',
+    'BBBBBBBBBBBBBBBBBBB.BB',
+    'B....................BB',
+    'B.BBBBBBBBBBBBBBBBBBBB',
+    'B....................BB',
+    'BBBBBBBBBBBBBBBBBBB.BB',
+    'B....................BB',
+    'B.BBBBBBBBBBBBBBBBBBBB',
+    'B....................BB',
+    'BBBBBBBBBBBBBBBBBBB.BB',
+    'B....................BB',
+    'B.BBBBBBBBBBBBBBBBBBBB',
+    'B....................BB',
+    'B...................CBB',
+    'BBBBBBBBBBBBBBBBBBBBBB'
+],
+
+# Mapa 3 – S Invertido (aberturas alternadas começando pela esquerda)
+[
+    'BBBBBBBBBBBBBBBBBBBBBB',
+    'B...................PB',
+    'B.BBBBBBBBBBBBBBBBBBBBB',
+    'B....................B',
+    'BBBBBBBBBBBBBBBBBBBB.BB',
+    'B....................B',
+    'B.BBBBBBBBBBBBBBBBBBBBB',
+    'B....................B',
+    'BBBBBBBBBBBBBBBBBBBB.BB',
+    'B....................B',
+    'B.BBBBBBBBBBBBBBBBBBBBB',
+    'B....................B',
+    'BBBBBBBBBBBBBBBBBBBB.BB',
+    'B....................B',
+    'B.BBBBBBBBBBBBBBBBBBBBB',
+    'B....................B',
+    'BBBBBBBBBBBBBBBBBBBB.BB',
+    'BC...................B',
+    'B...................BB',
+    'BBBBBBBBBBBBBBBBBBBBBB'
+],
+
+# Mapa 4 – Alternância Central (aberturas no centro e laterais)
+[
+    'BBBBBBBBBBBBBBBBBBBBBB',
+    'BP..................BB',
+    'BBBBBBBBBBB.BBBBBBBBBB',
+    'B..................BBBB',
+    'B..BBBBBBBBBBBBBB..BBBB',
+    'B..................BBBB',
+    'BBBBBBBBBBB.BBBBBBBBBB',
+    'B..................BBBB',
+    'B..BBBBBBBBBBBBBB..BBBB',
+    'B..................BBBB',
+    'BBBBBBBBBBB.BBBBBBBBBBB',
+    'B..................BBBB',
+    'B..BBBBBBBBBBBBBB..BBBB',
+    'B..................BBBB',
+    'BBBBBBBBBBB.BBBBBBBBBBBBB',
+    'B..................BBBB',
+    'B..BBBBBBBBBBBBBB..BBBB',
+    'B..................BBBB',
+    'B........C.........BBBB',
+    'BBBBBBBBBBBBBBBBBBBBBB'
+],
+
+# Mapa 5 – Colunas (pilares 2×2 em grade)
+[
+    'BBBBBBBBBBBBBBBBBBBBBB',
+    'BP....B....B....B....B',
+    'B.....B....B....B....B',
+    'B..B..B..B..B..B..B..B',
+    'B..B..B..B..B..B..B..B',
+    'B.....B....B....B....B',
+    'B.........B....B.....B',
+    'B..B..B..B..B..B..B.CB',
+    'B..B..B..B..B..B..B..B',
+    'B.....B....B....B....B',
+    'B....B....B....B.....B',
+    'B..B..B..B..B..B..B..B',
+    'B..B..B..B..B..B..B..B',
+    'B.....B....B....B....B',
+    'B....B....B....B.....B',
+    'B..B..B..B..B..B..B..B',
+    'B..B..B..B..B..B..B..B',
+    'B.....B....B.........B',
+    'B....B.........B.....B',
+    'BBBBBBBBBBBBBBBBBBBBBB'
+]
+]]
