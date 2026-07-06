@@ -145,7 +145,7 @@ def modo_principal():
             return
 
 def modo_secundario():
-    tilesizes = {1: 256, 2: 160, 3: 128, 4: 128, 5: 64}
+    tilesizes = {1: 128, 2: 128, 3: 128, 4: 128, 5: 128}
     nivel_escolhido = None
     nivel_desbloqueado = ler_progresso("Secundario")
 

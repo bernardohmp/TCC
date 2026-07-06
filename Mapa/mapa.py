@@ -354,3 +354,16 @@ tilemaps=[[
     'BBBBBBBBBBBBBBBBBBBBBB'
 ]
 ]]
+
+tilemaps_secundario =[
+    'BBBBBBBBBBB',
+    'B.........B',
+    'B.........B',
+    'B.........B',
+    'B.........B',
+    'B....P....B',
+    'B.........B',
+    'B.........B',
+    'B.........B',
+    'BBBBBBBBBBB'
+]

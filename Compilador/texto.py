@@ -16,7 +16,7 @@ TEXTOS_MODO_PRINCIPAL=[[
 ],
 [
         "Bem-vindo ao desafio! 3",
-        "Agora, além de poder repetir, pode-mos fazer decições",
+        "Agora, além de poder repetir, podemos fazer decições",
         "Por exemplo: x=1; if(x>1){ move_up();} else{move_down();}",
         "O código anterior moveria o personagem para cima, parece algo bobo, mas possui um segredo poderoso",
         "Podemos combinar os comandos de repetição dentro dos comandos de decisão, ou vice-versa!!!",
@@ -245,7 +245,12 @@ move_left();""",
     """move_up();
 move_right();
 move_down();
-move_left();""",
+move_left();
+move_right();
+move_up();
+move_left();
+move_down();
+""",
 
 """i = 0;
 while (i < 3) {
@@ -277,7 +282,7 @@ if (x > y) {
         i = i + 1;
     }
 }
-quadrado(2);"""   
+quadrado(4);"""   
 
 ]
 COMANDOS_PARA_OS_CODIGOS=[
@@ -290,7 +295,11 @@ COMANDOS_PARA_OS_CODIGOS=[
     """cima
     direita
     baixo
-    esquerda""",
+    esquerda
+    direita
+    cima
+    esquerda
+    baixo""",
 
 
     """cima
@@ -308,6 +317,10 @@ COMANDOS_PARA_OS_CODIGOS=[
 
     """cima
     cima
+    cima
+    cima
+    direita
+    direita
     direita
     direita"""
 ]
