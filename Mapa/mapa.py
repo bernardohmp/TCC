@@ -105,7 +105,7 @@ tilemaps=[[
     'B....CB...B',
     'B..B..B...B',
     'B..B..B...B',
-    'B..........B',
+    'B.........B',
     'BBBBBBBBBBB'
 ]
 
@@ -147,7 +147,7 @@ tilemaps=[[
     'B.B....CB.B',
     'B.B..B..B.B',
     'B....B....B',
-    'B..........B',
+    'B.........B',
     'BBBBBBBBBBB'
 ]
 
@@ -161,7 +161,7 @@ tilemaps=[[
     'B.B.B.B...B',
     'B.B.B.B...B',
     'B...B.....B',
-    'B..........B',
+    'B.........B',
     'BBBBBBBBBBB'
 ] 
 ],
