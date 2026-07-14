@@ -237,40 +237,178 @@ TEXTOS_FINAIS_SECUNDARIO = [[
 
 
 CODIGOS_MODO_SECUNDARIO = [
-    """move_up();
+    # Nível 1
+    [
+        """move_up();
 move_right();
 move_down();
 move_left();""",
 
-    """move_up();
+        """move_up();
+move_down();
+move_right();
+move_left();""",
+
+        """move_left();
+move_up();
+move_right();
+move_down();""",
+
+        """move_up();
+move_left();
+move_right();
+move_down();""",
+
+        """move_down();
+move_up();
+move_right();
+move_left();"""
+    ],
+
+    # Nível 2 – sequências lineares mais longas
+    [
+        """move_up();
 move_right();
 move_down();
 move_left();
 move_right();
 move_up();
 move_left();
-move_down();
-""",
+move_down();""",
 
-"""i = 0;
+        """move_right();
+move_up();
+move_left();
+move_down();
+move_right();
+move_down();
+move_up();
+move_left();""",
+
+        """move_down();
+move_right();
+move_up();
+move_left();
+move_up();
+move_right();
+move_down();
+move_left();""",
+
+        """move_left();
+move_down();
+move_right();
+move_up();
+move_down();
+move_left();
+move_up();
+move_right();""",
+
+        """move_up();
+move_left();
+move_down();
+move_right();
+move_up();
+move_right();
+move_down();
+move_left();"""
+    ],
+
+    # Nível 3 – while loops
+    [
+        """i = 0;
 while (i < 3) {
-  move_up();
-  move_right();
-  i = i + 1;
+    move_up();
+    move_right();
+    i = i + 1;
 }
 move_down();""",
 
-"""x = 5;
+        """i = 0;
+while (i < 2) {
+    move_left();
+    move_down();
+    i = i + 1;
+}
+move_up();""",
+
+        """i = 0;
+while (i < 4) {
+    move_right();
+    i = i + 1;
+}
+move_down();
+move_left();""",
+
+        """i = 0;
+while (i < 3) {
+    move_down();
+    move_left();
+    i = i + 1;
+}
+move_up();
+move_right();""",
+
+        """i = 0;
+while (i < 2) {
+    move_up();
+    move_right();
+    move_down();
+    i = i + 1;
+}
+move_left();"""
+    ],
+
+    # Nível 4 – condicionais
+    [
+        """x = 5;
 y = 3;
 if (x > y) {
     move_right();
     move_right();
 } else {
     move_left();
-}"""
-,
+}""",
 
- """function quadrado(lado) {
+        """a = 2;
+b = 7;
+if (a < b) {
+    move_up();
+    move_up();
+} else {
+    move_down();
+}""",
+
+        """m = 4;
+n = 4;
+if (m == n) {
+    move_left();
+    move_up();
+} else {
+    move_right();
+}""",
+
+        """p = 10;
+q = 5;
+if (p >= q) {
+    move_down();
+    move_right();
+} else {
+    move_up();
+}""",
+
+        """v1 = 3;
+v2 = 8;
+if (v1 != v2) {
+    move_up();
+    move_left();
+} else {
+    move_down();
+}"""
+    ],
+
+    # Nível 5 – funções
+    [
+        """function quadrado(lado) {
     i = 0;
     while (i < lado) {
         move_up();
@@ -282,45 +420,240 @@ if (x > y) {
         i = i + 1;
     }
 }
-quadrado(4);"""   
+quadrado(4);""",
 
+        """function escada(degraus) {
+    i = 0;
+    while (i < degraus) {
+        move_up();
+        move_right();
+        i = i + 1;
+    }
+}
+escada(3);""",
+
+        """function retangulo(largura, altura) {
+    i = 0;
+    while (i < altura) {
+        move_up();
+        i = i + 1;
+    }
+    i = 0;
+    while (i < largura) {
+        move_right();
+        i = i + 1;
+    }
+}
+retangulo(2, 4);""",
+
+        """function linha(passos) {
+    i = 0;
+    while (i < passos) {
+        move_down();
+        i = i + 1;
+    }
+}
+linha(3);""",
+
+        """function cruz(tamanho) {
+    i = 0;
+    while (i < tamanho) {
+        move_up();
+        i = i + 1;
+    }
+    i = 0;
+    while (i < tamanho) {
+        move_down();
+        i = i + 1;
+    }
+    i = 0;
+    while (i < tamanho) {
+        move_left();
+        i = i + 1;
+    }
+    i = 0;
+    while (i < tamanho) {
+        move_right();
+        i = i + 1;
+    }
+}
+cruz(2);"""
+    ]
 ]
-COMANDOS_PARA_OS_CODIGOS=[
-    """cima
-    direita
-    baixo
-    esquerda""",
 
+COMANDOS_PARA_OS_CODIGOS = [
+    # Nível 1 
+    [
+        """cima
+direita
+baixo
+esquerda""",
 
-    """cima
-    direita
-    baixo
-    esquerda
-    direita
-    cima
-    esquerda
-    baixo""",
+        """cima
+baixo
+direita
+esquerda""",
 
+        """esquerda
+cima
+direita
+baixo""",
 
-    """cima
-    direita
-    cima
-    direita
-    cima
-    direita
-    baixo""",
+        """cima
+esquerda
+direita
+baixo""",
 
+        """baixo
+cima
+direita
+esquerda"""
+    ],
 
-    """direita
-    direita""",
+    # Nível 2
+    [
+        """cima
+direita
+baixo
+esquerda
+direita
+cima
+esquerda
+baixo""",
 
+        """direita
+cima
+esquerda
+baixo
+direita
+baixo
+cima
+esquerda""",
 
-    """cima
-    cima
-    cima
-    cima
-    direita
-    direita
-    direita
-    direita"""
+        """baixo
+direita
+cima
+esquerda
+cima
+direita
+baixo
+esquerda""",
+
+        """esquerda
+baixo
+direita
+cima
+baixo
+esquerda
+cima
+direita""",
+
+        """cima
+esquerda
+baixo
+direita
+cima
+direita
+baixo
+esquerda"""
+    ],
+
+    # Nível 3
+    [
+        """cima
+direita
+cima
+direita
+cima
+direita
+baixo""",
+
+        """esquerda
+baixo
+esquerda
+baixo
+cima""",
+
+        """direita
+direita
+direita
+direita
+baixo
+esquerda""",
+
+        """baixo
+esquerda
+baixo
+esquerda
+baixo
+esquerda
+cima
+direita""",
+
+        """cima
+direita
+baixo
+cima
+direita
+baixo
+esquerda"""
+    ],
+
+    # Nível 4
+    [
+        """direita
+direita""",
+
+        """cima
+cima""",
+
+        """esquerda
+cima""",
+
+        """baixo
+direita""",
+
+        """cima
+esquerda"""
+    ],
+
+    # Nível 5
+    [
+        """cima
+cima
+cima
+cima
+direita
+direita
+direita
+direita""",
+
+        """cima
+direita
+cima
+direita
+cima
+direita""",
+
+        """cima
+cima
+cima
+cima
+direita
+direita""",
+
+        """baixo
+baixo
+baixo
+""",
+
+        """cima
+cima
+baixo
+baixo
+esquerda
+esquerda
+direita
+direita"""
+    ]
 ]

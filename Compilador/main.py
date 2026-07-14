@@ -64,7 +64,7 @@ class Game():
 
         self.player_spritesheet = Spritesheet('Mapa/Imagens/Player/Char_002.png')
 
-        self.mapa_idx = random.randint(0, 4)
+        self.mapa_idx =  random.randint(0, 4)
         if self.modo == "Principal":
             self.tilemap = [list(row) for row in tilemaps[(self.nivel)-1][self.mapa_idx]]
         else:
@@ -86,7 +86,7 @@ class Game():
         else:
             self.dialog_messages = TEXTOS_MODO_SECUNDARIO[self.nivel-1]
             self.reference_text = TEXTOS_FINAIS_SECUNDARIO[self.nivel-1]
-            self.comandos = COMANDOS_PARA_OS_CODIGOS[self.nivel-1]
+            self.comandos = COMANDOS_PARA_OS_CODIGOS[self.nivel-1][self.mapa_idx]
         self.current_message_index = 0
         self.dialog_active = True  # O diálogo começa ativo
         self.tutorial_complete = False
@@ -124,7 +124,7 @@ class Game():
         self.lock = False
         self.create_map()
         if self.modo == "Secundario":
-            self.editor.text = CODIGOS_MODO_SECUNDARIO[self.nivel - 1]
+            self.editor.text = CODIGOS_MODO_SECUNDARIO[self.nivel - 1][self.mapa_idx]
             self.editor.update_surface() 
             self.draw()
     #DIALOGO
@@ -258,7 +258,7 @@ class Game():
         else:
             self.dialog_messages = TEXTOS_MODO_SECUNDARIO[self.nivel-1]
             self.reference_text = TEXTOS_FINAIS_SECUNDARIO[self.nivel-1]
-            self.comandos = COMANDOS_PARA_OS_CODIGOS[self.nivel-1]
+            self.comandos = COMANDOS_PARA_OS_CODIGOS[self.nivel-1][self.mapa_idx]
             self.tilemap = [list(row) for row in tilemaps_secundario]
         self.current_message_index = 0
         self.dialog_active = True  # O diálogo começa ativo
