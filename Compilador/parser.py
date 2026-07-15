@@ -10,8 +10,6 @@ class Parser:
         self.current_token = self.tokens[0]
         self.flag = 0
 
-    #def error(self, msg):
-    #    print(f"Erro sintático: {msg} na linha {self.current_token.line}")
     #funcao simples eat, apenas verifica se o tipo do token é o tipo esperado
     def eat(self, token_type):
         if self.current_token.type == token_type:

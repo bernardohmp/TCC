@@ -61,15 +61,14 @@ class Game():
         self.clock = pygame.time.Clock()
         self.running = True
         self.dt = 0
-
-        self.player_spritesheet = Spritesheet('Mapa/Imagens/Player/Char_002.png')
-
+        #Mapa
         self.mapa_idx =  random.randint(0, 4)
         if self.modo == "Principal":
             self.tilemap = [list(row) for row in tilemaps[(self.nivel)-1][self.mapa_idx]]
         else:
             self.tilemap = [list(row) for row in tilemaps_secundario]
         # Player
+        self.player_spritesheet = Spritesheet('Mapa/Imagens/Player/Char_002.png')
         self.player_pos = [0,0]
         self.direction = "up"
         self.animationCounter = 0
@@ -521,9 +520,6 @@ class Game():
         if (keys[pygame.K_F5] or keys[pygame.K_CAPSLOCK]) and self.modo == "Principal":
             texto = self.editor.get_text()
             self.moves = self.count_moves(texto)
-            self.execute_code()
-        elif keys[pygame.K_F6] and self.modo == "Principal":
-            self.editor.text = "i=0; while(i<3){move_up();move_right();i=i+1;}move_up();"
             self.execute_code()
         elif keys[pygame.K_F7]:
             self.reset_level()

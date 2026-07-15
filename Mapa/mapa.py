@@ -234,7 +234,7 @@ tilemaps=[[
 ]
 ],
 [
-    # Mapa 1 – Cobra (caminho sinuoso)
+    # Mapa 1 
 [
     'BBBBBBBBBBBBBBBBBBBBBB',
     'BP....................B',
@@ -258,7 +258,7 @@ tilemaps=[[
     'BBBBBBBBBBBBBBBBBBBBBB'
 ],
 
-# Mapa 2 – Caminho em S (aberturas alternadas à direita/esquerda)
+# Mapa 2
 [
     'BBBBBBBBBBBBBBBBBBBBBB',
     'BP...................B',
@@ -282,7 +282,7 @@ tilemaps=[[
     'BBBBBBBBBBBBBBBBBBBBBB'
 ],
 
-# Mapa 3 – S Invertido (aberturas alternadas começando pela esquerda)
+# Mapa 3
 [
     'BBBBBBBBBBBBBBBBBBBBBB',
     'B...................PB',
@@ -306,7 +306,7 @@ tilemaps=[[
     'BBBBBBBBBBBBBBBBBBBBBB'
 ],
 
-# Mapa 4 – Alternância Central (aberturas no centro e laterais)
+# Mapa 4
 [
     'BBBBBBBBBBBBBBBBBBBBBB',
     'BP..................BB',
@@ -330,7 +330,7 @@ tilemaps=[[
     'BBBBBBBBBBBBBBBBBBBBBB'
 ],
 
-# Mapa 5 – Colunas (pilares 2×2 em grade)
+# Mapa 5 
 [
     'BBBBBBBBBBBBBBBBBBBBBB',
     'BP....B....B....B....B',

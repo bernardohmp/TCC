@@ -408,7 +408,7 @@ if (v1 != v2) {
 
     # Nível 5 – funções
     [
-        """function quadrado(lado) {
+    """def quadrado(lado) {
     i = 0;
     while (i < lado) {
         move_up();
@@ -422,7 +422,7 @@ if (v1 != v2) {
 }
 quadrado(4);""",
 
-        """function escada(degraus) {
+    """def escada(degraus) {
     i = 0;
     while (i < degraus) {
         move_up();
@@ -432,7 +432,7 @@ quadrado(4);""",
 }
 escada(3);""",
 
-        """function retangulo(largura, altura) {
+    """def retangulo(largura, altura) {
     i = 0;
     while (i < altura) {
         move_up();
@@ -446,7 +446,7 @@ escada(3);""",
 }
 retangulo(2, 4);""",
 
-        """function linha(passos) {
+    """def linha(passos) {
     i = 0;
     while (i < passos) {
         move_down();
@@ -455,7 +455,7 @@ retangulo(2, 4);""",
 }
 linha(3);""",
 
-        """function cruz(tamanho) {
+    """def cruz(tamanho) {
     i = 0;
     while (i < tamanho) {
         move_up();
@@ -478,7 +478,7 @@ linha(3);""",
     }
 }
 cruz(2);"""
-    ]
+]
 ]
 
 COMANDOS_PARA_OS_CODIGOS = [

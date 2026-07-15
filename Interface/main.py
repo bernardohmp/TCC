@@ -286,7 +286,7 @@ def Pontuacao():
         pygame.display.update()
 
 def tela_vitoria(game):
-    """Exibe a tela de vitória e retorna 'menu' ou 'proximo'."""
+    #Exibe a tela de vitória e retorna 'menu' ou 'proximo'
     tem_proximo = game.nivel < 5
 
     while True:
