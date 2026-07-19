@@ -22,15 +22,15 @@ ESCALA_X = NATIVA_LARGURA / DESIGN_LARGURA
 ESCALA_Y = NATIVA_ALTURA / DESIGN_ALTURA
 
 def escala_x(valor):
-    """Converte uma coordenada X do design para a resolução nativa."""
+    #Converte uma coordenada X
     return int(valor * ESCALA_X)
 
 def escala_y(valor):
-    """Converte uma coordenada Y do design para a resolução nativa."""
+    #Converte uma coordenada Y
     return int(valor * ESCALA_Y)
 
 def escala_fonte(tamanho):
-    """Retorna um tamanho de fonte escalado (mínimo 12)."""
+    #Retorna um tamanho de fonte escalado (mínimo 12)
     return max(12, int(tamanho * min(ESCALA_X, ESCALA_Y)))
 
 # Carrega e redimensiona o fundo para cobrir a tela inteira
@@ -213,7 +213,7 @@ def modo_secundario():
             return
 
 def ler_pontuacoes(caminho_arquivo):
-    """Retorna uma lista com as pontuações (float) de cada nível (5 níveis)."""
+    #Retorna uma lista com as pontuações  de cada nível 
     if not os.path.exists(caminho_arquivo):
         return [0.0] * 5
     with open(caminho_arquivo, 'r', encoding='utf-8') as f:

@@ -7,7 +7,7 @@ class MultilineEditor:
         self.text_color = text_color
         self.font = pygame.font.Font(None, font_size)
         
-        # Altura da linha: altura real máxima dos glifos + 6 pixels de folga
+        # Altura da linha: altura real + 6 pixels de folga
         self.line_height = self.font.get_height() + 6
         
         self.text = ""
@@ -23,7 +23,7 @@ class MultilineEditor:
         self.update_surface()
 
     def _wrap_text_to_visual(self, text, max_width):
-        """Quebra o texto em linhas visuais conforme a largura."""
+        #Quebra o texto em linhas visuais conforme a largura
         paragraphs = text.split('\n')
         visual = []
         for para in paragraphs:
@@ -171,7 +171,6 @@ class MultilineEditor:
             self.cursor_timer = 0
 
     def draw(self, dest_surface, offset_x=0, offset_y=0):
-        # Nenhum recorte – a superfície do split_screen_left já limita naturalmente
         # Força scroll_y a ser múltiplo de line_height
         self.scroll_y = (self.scroll_y // self.line_height) * self.line_height
         
@@ -188,7 +187,7 @@ class MultilineEditor:
             cursor_x = self.rect.x
         cursor_y = self.rect.y + line_i * self.line_height - self.scroll_y
         
-        # Ajuste de scroll suave (mantendo alinhamento)
+        # Ajuste de scroll
         if cursor_y < self.rect.y:
             # calcula quantas linhas subir
             diff = self.rect.y - cursor_y

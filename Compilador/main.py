@@ -13,6 +13,8 @@ import time
 from Mapa.mapa import *
 from Mapa.sprites import *
 import re
+
+#carrega as imagens
 class Spritesheet:
     def __init__(self, path):
         self.spritesheet = pygame.image.load(path).convert_alpha()
@@ -36,11 +38,13 @@ class Game():
         self.error_timer = 0.0
 
         pygame.init()
+        #tamanho de tela virtual
         self.VIRTUAL_WIDTH = 1877
         self.VIRTUAL_HEIGHT = 1280
         info = pygame.display.Info()
         self.real_width = info.current_w
         self.real_height = info.current_h
+        #coloca em tela cheia
         self.screen = pygame.display.set_mode((self.real_width, self.real_height), pygame.FULLSCREEN)
 
         # Superfície virtual
@@ -64,8 +68,10 @@ class Game():
         #Mapa
         self.mapa_idx =  random.randint(0, 4)
         if self.modo == "Principal":
+            #escolhe um mapa aleatório dos 5 possíveis
             self.tilemap = [list(row) for row in tilemaps[(self.nivel)-1][self.mapa_idx]]
         else:
+            #sempre o mesmo mapa para o modo secundario
             self.tilemap = [list(row) for row in tilemaps_secundario]
         # Player
         self.player_spritesheet = Spritesheet('Mapa/Imagens/Player/Char_002.png')
@@ -85,6 +91,7 @@ class Game():
         else:
             self.dialog_messages = TEXTOS_MODO_SECUNDARIO[self.nivel-1]
             self.reference_text = TEXTOS_FINAIS_SECUNDARIO[self.nivel-1]
+            #os comandos do modo secundario sao aleatorios
             self.comandos = COMANDOS_PARA_OS_CODIGOS[self.nivel-1][self.mapa_idx]
         self.current_message_index = 0
         self.dialog_active = True  # O diálogo começa ativo
@@ -123,6 +130,7 @@ class Game():
         self.lock = False
         self.create_map()
         if self.modo == "Secundario":
+            #usando o mesmo index dos comandos escolhe o texto
             self.editor.text = CODIGOS_MODO_SECUNDARIO[self.nivel - 1][self.mapa_idx]
             self.editor.update_surface() 
             self.draw()
@@ -494,7 +502,7 @@ class Game():
                 self.is_sliding = False
 
                 if i == len(movimentos) - 1:
-                    time.sleep(1)
+                    time.sleep(2)
 
             # Após todos os movimentos, recria o mapa
             self.tilemap = [list(row) for row in tilemaps[(self.nivel)-1][self.mapa_idx]]
